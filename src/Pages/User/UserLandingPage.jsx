@@ -1,6 +1,6 @@
 import React from 'react'
 import LandingPage from '../../Components/User/LandingPage'
-import Header from '../../Components/User/header'
+import Header from '../../Components/User/Header'
 
 const UserLandingPage = () => {
   return (
