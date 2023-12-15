@@ -53,7 +53,7 @@ function App() {
             <Route path="/signin" element={<UserSignIn />} />
             <Route path="/register" element={<UserRegister />} />
 
-            <Route path="/" element={<PrivateRoute />}>
+            <Route path="app/" element={<PrivateRoute />}>
               <Route path="home" element={<UserHomepage />} />
               <Route path="profile" element={<UserProfile />} />
               <Route path="addwork" element={<AddWorks />} />

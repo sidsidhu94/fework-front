@@ -151,7 +151,7 @@ const UsersInbox = () => {
     
 
 
-    navigate('/video')
+    navigate('app/video')
     
     const videoConferenceLink = `http://localhost:5173/room/123`;
   

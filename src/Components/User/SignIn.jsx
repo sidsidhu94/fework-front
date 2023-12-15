@@ -33,7 +33,7 @@ const SignIn = () => {
       dispatch(setLoginDetails({...res}))
       if(res.message === 'userlogin')
       {
-        navigate('/home')
+        navigate('app/home')
         toast.success('logged in succesfully')
       }
       // if(res.message === 'Not a registered user'){
@@ -49,7 +49,7 @@ const SignIn = () => {
 }
 const token = localStorage.getItem('userInfo')
   if (token){
-    return <Navigate to="/home" />
+    return <Navigate to="app/home" />
   }
 
   return (

@@ -10,7 +10,7 @@ const UserProfiles = () => {
 
     function handlesubmit(id) {
         console.log(id,"just testing..........")
-        navigate(`/userselected/${id}`)
+        navigate(`app/userselected/${id}`)
     }
    
 

@@ -28,9 +28,9 @@ const HomePageHeader = () => {
       <div className="navbar bg-base-100  ">
         <div className="flex-1 gap-10">
           
-          <a onClick={() => navigate('/home')} className="btn btn-ghost normal-case text-3xl  text-cyan-700">fe.Work</a>
-          <h1 onClick={()=> navigate('/home')} className=" text-cyan-700 text-xl " >Discover</h1>
-          <h1 onClick={()=> navigate('/userprofiles')} className=" text-cyan-700 text-xl " >Hire</h1>
+          <a onClick={() => navigate('app/home')} className="btn btn-ghost normal-case text-3xl  text-cyan-700">fe.Work</a>
+          <h1 onClick={()=> navigate('app/home')} className=" text-cyan-700 text-xl " >Discover</h1>
+          <h1 onClick={()=> navigate('app/userprofiles')} className=" text-cyan-700 text-xl " >Hire</h1>
           <h1 className=" text-cyan-700 text-xl ">Jobs</h1>
         </div>
        
@@ -45,7 +45,7 @@ const HomePageHeader = () => {
           {/* <div className="text-cyan-700 text-lg flex font-semibold   items-center  ">
             REQUESTS
           </div> */}
-          <div className="text-cyan-700 text-lg flex   items-center gap-1 mr-3" onClick={() =>navigate('/inbox')}>
+          <div className="text-cyan-700 text-lg flex   items-center gap-1 mr-3" onClick={() =>navigate('app/inbox')}>
             
             
             <IoMdChatbubbles/><p className="font-semibold" >INBOX</p>
@@ -65,14 +65,14 @@ const HomePageHeader = () => {
             >
               <li>
                 <a
-                 onClick={() => navigate('/profile')}
+                 onClick={() => navigate('app/profile')}
                  className="justify-between">
                   Profile
                   
                 </a>
               </li>
               <li>
-                <a onClick={()=>navigate('/editprofile')}>Edit Profile</a>
+                <a onClick={()=>navigate('app/editprofile')}>Edit Profile</a>
               </li>
               {/* <li>
                 <a>Settings</a>

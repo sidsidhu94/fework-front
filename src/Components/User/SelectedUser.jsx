@@ -10,7 +10,7 @@ const SelectedUser = ({profile}) => {
   
   function handleSubmit(id){
     // navigate(`/inbox/${id}`)
-    navigate(`/inbox1/${id}`)
+    navigate(`app/inbox1/${id}`)
   }
   
   
