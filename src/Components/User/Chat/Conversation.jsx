@@ -35,7 +35,7 @@ const Conversation = ({data}) => {
   
   function handleSubmit(id){
     // navigate(`/inbox/${id}`)
-    navigate(`/inbox1/${id}`)
+    navigate(`/app/inbox1/${id}`)
   }
   
 
@@ -62,7 +62,7 @@ const Conversation = ({data}) => {
         >
           <div className="flex flex-row items-center gap-1">
             <div
-              className="flex items-center justify-center bg-rose-500 rounded-full  w-12 h-12 "
+              className="flex items-center justify-center bg-cyan-700 rounded-full  w-12 h-12 "
             >
               <span className="font-semibold text-2xl capitalize text-white ">{user.user_profile.username[0]}</span>
             </div>

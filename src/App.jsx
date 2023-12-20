@@ -35,6 +35,13 @@ import Premium from "./Components/Admin/Premium";
 import AdminPremiumAdd from "./Pages/Admin/AdminPremiumAdd";
 import Message from "./Pages/User/Message";
 import PrivateRoute from "./Components/Routing/PrivateRoute";
+import PostWork from "./Components/User/PostWork";
+import JobPosting from "./Pages/User/JobPosting";
+import JobDisplay from "./Components/User/JobDisplay";
+import JobsDisplayPremium from "./Components/User/JobsDisplayPremium";
+import PostWorkDisplay from "./Components/User/PostWorkDisplay";
+import ViewJobs from "./Pages/User/ViewJobs";
+import AdminUserList from "./Pages/Admin/AdminUserList";
 
 // function App() {
 // const [count, setCount] = useState(0)
@@ -53,7 +60,7 @@ function App() {
             <Route path="/signin" element={<UserSignIn />} />
             <Route path="/register" element={<UserRegister />} />
 
-            <Route path="app/" element={<PrivateRoute />}>
+            <Route path="/app" element={<PrivateRoute />}>
               <Route path="home" element={<UserHomepage />} />
               <Route path="profile" element={<UserProfile />} />
               <Route path="addwork" element={<AddWorks />} />
@@ -67,13 +74,19 @@ function App() {
               <Route path="room/:roomId" element={<UserVideoCall />} />
               <Route path="userprofiles" element={<HireUser />} />
 
+              <Route path="jobpremium" element={<JobsDisplayPremium />} />
+              <Route path="viewjob" element={<ViewJobs />} />
+
+
               <Route
-                path="/userselected/:id"
+                path="userselected/:id"
                 element={<UserselectedProfile />}
               />
 
-              <Route path="/like" element={<Comment />} />
+              <Route path="like" element={<Comment />} />
             </Route>
+            <Route path="/postwork" element={<JobPosting />} />
+            <Route path="/displaywork" element={<JobDisplay />} />
 
             <Route
               exact
@@ -82,6 +95,7 @@ function App() {
                 token ? <AdminDashboardPage /> : <Navigate to={"/admin"} />
               }
             />
+            <Route path="/userlist" element={<AdminUserList />} />
             {/* <Route  path="/adminuser" element={<AdminUserList />} /> */}
             <Route path="/admin" element={<AdminLoginPage />} />
             {/* <Route  path="/editprofile" element={<EditProfile />} /> */}

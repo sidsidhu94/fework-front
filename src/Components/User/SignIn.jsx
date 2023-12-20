@@ -33,7 +33,7 @@ const SignIn = () => {
       dispatch(setLoginDetails({...res}))
       if(res.message === 'userlogin')
       {
-        navigate('app/home')
+        navigate('/app/home')
         toast.success('logged in succesfully')
       }
       // if(res.message === 'Not a registered user'){
@@ -47,10 +47,11 @@ const SignIn = () => {
     
 
 }
-const token = localStorage.getItem('userInfo')
-  if (token){
-    return <Navigate to="app/home" />
-  }
+// const token = localStorage.getItem('userInfo')
+//   if (token){
+//     navigate('app/home')
+//     // return <Navigate to="app/home" />
+//   }
 
   return (
     <div className="w-full max-w-sm p-6 m-auto mx-auto bg-white rounded-lg shadow-md dark:bg-gray-800 mt-32">

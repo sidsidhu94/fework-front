@@ -2,9 +2,9 @@ import React from "react";
 import { GrAdd } from "react-icons/gr";
 import { Link } from "react-router-dom";
 
-const AddWork = () => {
+const AddWork = ({title}) => {
   return (
-    <Link to="/addwork" >
+    <Link to="/app/addwork" >
     <div
       className="relative
     cursor-pointer
@@ -28,7 +28,7 @@ const AddWork = () => {
     
     >
       <GrAdd />
-      Add your work here
+      {title}
     </div>
     </Link>
   );

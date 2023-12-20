@@ -244,7 +244,7 @@ const UsersInbox = () => {
             >
               <div className="flex  justify-between  w-full items-center gap-1">
                 <div className="flex items-center">
-                  <div className="flex items-center justify-center bg-rose-500 rounded-full  w-12 h-12 ">
+                  <div className="flex items-center justify-center bg-cyan-700 rounded-full  w-12 h-12 ">
                     <span className="font-semibold text-2xl capitalize text-white">
                       {/* {chatter[0]} */}
                     </span>
@@ -256,7 +256,7 @@ const UsersInbox = () => {
 
                 <div>
                   {/* <FaVideo onClick={handleVideo} className=" w-11 h-8 text-cyan-700" /> */}
-                  <Link to="/video" target="_blank" rel="noopener noreferrer"><FaVideo  className=" w-11 h-8 text-cyan-700" /></Link>
+                  <Link to="/app/video" target="_blank" rel="noopener noreferrer"><FaVideo  className=" w-11 h-8 text-cyan-700" /></Link>
                   {/* <FaVideo  href="https://www.w3schools.com/tags/tag_a.asp" target="_blank" className=" w-11 h-8 text-cyan-700" /> */}
                 </div>
               </div>
@@ -284,7 +284,7 @@ const UsersInbox = () => {
                           ? "self-end justify-end"
                           : "self-start justify-end";
                       })()} bg-${
-                        msg?.sender == userId ? "blue-500" : "gray-200"
+                        msg?.sender == userId ? "cyan-700" : "gray-200"
                       } text-red rounded-lg p-2 flex items-center`}
                     >
                       <span className="material-icons mr-2"></span>
@@ -297,14 +297,14 @@ const UsersInbox = () => {
             </div>
 
             {/* chat-sender */}
-            <div className="  flex justify-start items-center gap-4 p-2 rounded-md self-start w-full mt-16">
+            <div className="  flex justify-start items-center gap-4 rounded-md self-start w-full mt-16 ">
               {/* <InputEmoji
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               
             /> */}
               <input
-                className="w-[90%] border border-black"
+                className="w-[90%] h-8 border border-cyan-700 rounded-xl "
                 type=""
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
@@ -312,7 +312,7 @@ const UsersInbox = () => {
               <div
                 onClick={() => sendMessage()}
                 className="flex items-center justify-center text-white border-none rounded-xl
-              bg-rose-500 transition-all duration-100 ease-out p-2 cursor-pointer"
+              bg-cyan-700 transition-all duration-100 ease-out p-2 cursor-pointer"
               >
                 Send
               </div>

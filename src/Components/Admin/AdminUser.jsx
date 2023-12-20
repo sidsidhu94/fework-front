@@ -16,7 +16,7 @@ const AdminUser = () => {
   useEffect(() => {
     const users = async () => {
       const response = await axios.get(
-        "http://127.0.0.1:8000/api/account/dashboard/"
+        `${baseURL}account/dashboard/`
       );
       console.log(response, ">>>>>>>>>>>>.");
       setUsers(response.data);

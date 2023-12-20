@@ -6,7 +6,7 @@ const VideoCall = () => {
   const navigate = useNavigate()
 
   const handleJoinRoom = useCallback(() =>{
-        navigate(`app/room/${value}`)
+        navigate(`/app/room/${value}`)
   },[navigate,value])
 
   return (

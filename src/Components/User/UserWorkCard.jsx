@@ -14,7 +14,7 @@ import AddWork from "./AddWork";
 import UserWorkDisplay from "./UserWorkDisplay";
 import { baseURL } from "../Api/Url";
 
-const UserWorkCard = () => {
+const UserWorkCard = ({title}) => {
   const [userwork, setUserwork] = useState([]);
 
   const [WorkDisplay, setWorkDisplay] = useState(false);
@@ -69,7 +69,7 @@ const UserWorkCard = () => {
 
       </div>}</>
       <div className="flex flex-wrap gap-10">
-        <AddWork />
+        <AddWork title={title}/>
         {userwork?.map((data,index) => {
           return (
             <>

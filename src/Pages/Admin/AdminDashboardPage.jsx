@@ -1,7 +1,8 @@
 import React from "react";
 import SideNavbar from "../../Components/Admin/SideNavbar";
-import AdminUser from "../../Components/Admin/AdminUser";
+
 import AdminHeader from "../../Components/Admin/AdminHeader";
+import AdminDashboard from "../../Components/Admin/AdminDashboard";
 
 const AdminDashboardPage = () => {
   return (
@@ -11,7 +12,7 @@ const AdminDashboardPage = () => {
         <SideNavbar />
 
         <div className="w-full">
-          <AdminUser />
+          <AdminDashboard />
         </div>
       </div>
     </div>

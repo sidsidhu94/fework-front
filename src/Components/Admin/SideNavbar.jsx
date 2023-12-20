@@ -7,11 +7,11 @@ const SideNavbar = () => {
         <div className=" flex px-5 basis-[20%] h-[100vh] bg-cyan-700">
             <div className='px-3'>
                 <div className='flex items-center gap-[15px] py-[20px] border-b-[1px] border-[#ededed]/[0.3]'>
-                    <h1 className='text-white text-[18px] font-bold leading-[20px]'>Dashboard</h1>
+                    <h1 onClick={() => navigate('/dashboard')} className='text-white text-[18px] font-bold leading-[20px]'>Dashboard</h1>
 
                 </div>
                 <div className='flex items-center gap-[15px] py-[20px] border-b-[1px] border-[#ededed]/[0.3]'>
-                    <h1 onClick={() => navigate('/dashboard')} className='text-white text-[18px] font-bold leading-[20px]'>Members</h1>
+                    <h1 onClick={() => navigate('/userlist')} className='text-white text-[18px] font-bold leading-[20px]'>Members</h1>
 
                 </div>
                 <div className='flex items-center gap-[15px] py-[20px] border-b-[1px] border-[#ededed]/[0.3]'>
