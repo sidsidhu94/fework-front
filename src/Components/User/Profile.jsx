@@ -46,9 +46,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchPremiumPlans = async () => {
       try {
-        const response = await axios.get(
-          `${baseURL}account/all-premium/`
-        );
+        const response = await axios.get(`${baseURL}account/all-premium/`);
         console.log(response, "Premium Plans");
         setPremium(response.data);
       } catch (error) {
@@ -154,7 +152,6 @@ const Profile = () => {
       });
   };
 
-
   useEffect(() => {
     console.log("???//////////////", Premium);
   });
@@ -226,13 +223,18 @@ const Profile = () => {
             <p className="text-zinc-500">500</p>
           </div>
         </div>
-        {userprofile.premium_member === "true"?(<button className="btn btn-wide mt-3 ml-8 bg-cyan-700 btn-circle text-cyan-500">Premuim Member</button>):(<button
-          onClick={() => setModalShow(!ModalShow)}
-          className="btn btn-wide mt-3 ml-8 bg-cyan-700 btn-circle text-cyan-500"
-        >
-          Unlock Premuim
-        </button>)}
-        
+        {userprofile.premium_member === "true" ? (
+          <button className="btn btn-wide mt-3 ml-8 bg-cyan-700 btn-circle text-cyan-500">
+            Premium Member
+          </button>
+        ) : (
+          <button
+            onClick={() => setModalShow(!ModalShow)}
+            className="btn btn-wide mt-3 ml-8 bg-cyan-700 btn-circle text-cyan-500"
+          >
+            Unlock Premium
+          </button>
+        )}
       </div>
       {ModalShow && (
         <div className="w-full h-full modalcard absolute top-0 z-50 flex justify-center ">
@@ -273,9 +275,10 @@ const Profile = () => {
                       </CardBody>
                       <Divider />
                       <CardFooter>
-                        
                         <Button
-                          onClick={() => handlePaymentButtonClick(items.id,items.price)}
+                          onClick={() =>
+                            handlePaymentButtonClick(items.id, items.price)
+                          }
                           radius="full"
                           className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"
                         >
