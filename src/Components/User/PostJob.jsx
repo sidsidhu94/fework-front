@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const PostJob = ({title}) => {
     return (
-        <Link to="/postwork" >
+        <Link to="/app/postwork" >
         <div
           className="relative
         cursor-pointer
