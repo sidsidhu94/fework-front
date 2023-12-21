@@ -84,9 +84,10 @@ function App() {
               />
 
               <Route path="like" element={<Comment />} />
+              <Route path="/postwork" element={<JobPosting />} />
+              <Route path="/displaywork" element={<JobDisplay />} />
             </Route>
-            <Route path="/postwork" element={<JobPosting />} />
-            <Route path="/displaywork" element={<JobDisplay />} />
+            
 
             <Route
               exact

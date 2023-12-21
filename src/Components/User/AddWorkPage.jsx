@@ -110,7 +110,7 @@ const AddWorkPage = () => {
       console.log('Images sent to the backend:', res.data)
       console.log('Data sent successfully:', res);
       if (res.status == 201){
-        navigate('app/profile')
+        navigate('/app/profile')
       }
     } catch (error) {
       console.error(error.message);
