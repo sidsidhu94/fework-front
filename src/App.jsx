@@ -84,8 +84,8 @@ function App() {
               />
 
               <Route path="like" element={<Comment />} />
-              <Route path="/postwork" element={<JobPosting />} />
-              <Route path="/displaywork" element={<JobDisplay />} />
+              <Route path="postwork" element={<JobPosting />} />
+              <Route path="displaywork" element={<JobDisplay />} />
             </Route>
             
 
