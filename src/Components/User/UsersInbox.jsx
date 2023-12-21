@@ -54,7 +54,7 @@ const UsersInbox = () => {
   }, [userId, id]);
 
   useEffect(() => {
-    const newSocket = new WebSocket("ws://http://www.shop-electron.shop/ws/chat/ABC/"); // Replace "ABC" with the appropriate identifier
+    const newSocket = new WebSocket("wss://shop-electron.shop/ws/chat/ABC/"); // Replace "ABC" with the appropriate identifier
 
     newSocket.onopen = () => {
       isMessageProcessed.current = false;
@@ -151,7 +151,7 @@ const UsersInbox = () => {
     
 
 
-    navigate('app/video')
+    navigate('/app/video')
     
     const videoConferenceLink = `http://localhost:5173/room/123`;
   
