@@ -232,7 +232,7 @@ const Profile = () => {
             onClick={() => setModalShow(!ModalShow)}
             className="btn btn-wide mt-3 ml-8 bg-cyan-700 btn-circle text-cyan-500"
           >
-            Unlock Premium
+            Unlock Premiumsss
           </button>
         )}
       </div>
