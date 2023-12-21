@@ -272,13 +272,15 @@ const Profile = () => {
                       </CardBody>
                       <Divider />
                       <CardFooter>
-                        <Button
+                        {userprofile.premium_member?(<Button radius="full"
+                          className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg">Premium Member</Button>):(<Button
                           onClick={() => handlePaymentButtonClick(items.id,items.price)}
                           radius="full"
                           className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"
                         >
                           Purchase Premium
-                        </Button>
+                        </Button>)}
+                        
                       </CardFooter>
                     </Card>
                   </form>
