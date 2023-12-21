@@ -24,7 +24,6 @@ const Profile = () => {
 
   const navigate = useNavigate();
 
-  console.log(userprofile.premium_member, "wfwedwed");
   const { userInfo } = useSelector((state) => state.user);
   const userId = userInfo?.user_id;
   console.log(userId);
@@ -47,7 +46,9 @@ const Profile = () => {
   useEffect(() => {
     const fetchPremiumPlans = async () => {
       try {
-        const response = await axios.get(`${baseURL}account/all-premium/`);
+        const response = await axios.get(
+          `${baseURL}account/all-premium/`
+        );
         console.log(response, "Premium Plans");
         setPremium(response.data);
       } catch (error) {
@@ -153,6 +154,7 @@ const Profile = () => {
       });
   };
 
+
   useEffect(() => {
     console.log("???//////////////", Premium);
   });
@@ -224,12 +226,13 @@ const Profile = () => {
             <p className="text-zinc-500">500</p>
           </div>
         </div>
-        <button
+        {userprofile.premium_member?(<button className="btn btn-wide mt-3 ml-8 bg-cyan-700 btn-circle text-cyan-500">Premuim Member</button>):(<button
           onClick={() => setModalShow(!ModalShow)}
           className="btn btn-wide mt-3 ml-8 bg-cyan-700 btn-circle text-cyan-500"
         >
           Unlock Premuim
-        </button>
+        </button>)}
+        
       </div>
       {ModalShow && (
         <div className="w-full h-full modalcard absolute top-0 z-50 flex justify-center ">
@@ -270,24 +273,14 @@ const Profile = () => {
                       </CardBody>
                       <Divider />
                       <CardFooter>
-                        {userprofile.premium_member === "true" ? (
-                          <Button
-                            radius="full"
-                            className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"
-                          >
-                            Premium Member
-                          </Button>
-                        ) : (
-                          <Button
-                            onClick={() =>
-                              handlePaymentButtonClick(items.id, items.price)
-                            }
-                            radius="full"
-                            className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"
-                          >
-                            Purchase Premium
-                          </Button>
-                        )}
+                        
+                        <Button
+                          onClick={() => handlePaymentButtonClick(items.id,items.price)}
+                          radius="full"
+                          className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"
+                        >
+                          Purchase Premium
+                        </Button>
                       </CardFooter>
                     </Card>
                   </form>
