@@ -24,7 +24,7 @@ const Profile = () => {
 
   const navigate = useNavigate();
 
-  console.log(userprofile.premium_member,"wfwedwed")
+  console.log(userprofile.premium_member, "wfwedwed");
   const { userInfo } = useSelector((state) => state.user);
   const userId = userInfo?.user_id;
   console.log(userId);
@@ -47,9 +47,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchPremiumPlans = async () => {
       try {
-        const response = await axios.get(
-          `${baseURL}account/all-premium/`
-        );
+        const response = await axios.get(`${baseURL}account/all-premium/`);
         console.log(response, "Premium Plans");
         setPremium(response.data);
       } catch (error) {
@@ -154,7 +152,6 @@ const Profile = () => {
         console.error("Error initiating Razorpay:", error);
       });
   };
-
 
   useEffect(() => {
     console.log("???//////////////", Premium);
@@ -273,15 +270,24 @@ const Profile = () => {
                       </CardBody>
                       <Divider />
                       <CardFooter>
-                        {userprofile.premium_member == "true"?(<Button radius="full"
-                          className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg">Premium Member</Button>):(<Button
-                          onClick={() => handlePaymentButtonClick(items.id,items.price)}
-                          radius="full"
-                          className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"
-                        >
-                          Purchase Premium
-                        </Button>)}
-                        
+                        {userprofile.premium_member === "true" ? (
+                          <Button
+                            radius="full"
+                            className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"
+                          >
+                            Premium Member
+                          </Button>
+                        ) : (
+                          <Button
+                            onClick={() =>
+                              handlePaymentButtonClick(items.id, items.price)
+                            }
+                            radius="full"
+                            className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"
+                          >
+                            Purchase Premium
+                          </Button>
+                        )}
                       </CardFooter>
                     </Card>
                   </form>
