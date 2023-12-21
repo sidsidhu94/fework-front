@@ -24,6 +24,7 @@ const Profile = () => {
 
   const navigate = useNavigate();
 
+  console.log(userprofile.premium_member,"wfwedwed")
   const { userInfo } = useSelector((state) => state.user);
   const userId = userInfo?.user_id;
   console.log(userId);
