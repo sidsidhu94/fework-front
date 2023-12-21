@@ -226,7 +226,7 @@ const Profile = () => {
             <p className="text-zinc-500">500</p>
           </div>
         </div>
-        {userprofile.premium_member?(<button className="btn btn-wide mt-3 ml-8 bg-cyan-700 btn-circle text-cyan-500">Premuim Member</button>):(<button
+        {userprofile.premium_member === "true"?(<button className="btn btn-wide mt-3 ml-8 bg-cyan-700 btn-circle text-cyan-500">Premuim Member</button>):(<button
           onClick={() => setModalShow(!ModalShow)}
           className="btn btn-wide mt-3 ml-8 bg-cyan-700 btn-circle text-cyan-500"
         >
