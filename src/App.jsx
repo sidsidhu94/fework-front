@@ -68,7 +68,7 @@ function App() {
               <Route path="editprofile" element={<UserEditProfile />} />
 
               <Route path="inbox" element={<Message />} />
-              <Route path="inbox1/:id" element={<Message />} />
+              <Route path="inbox1/:id/:name" element={<Message />} />
               <Route path="modal" element={<UserWorkDisplay />} />
               <Route path="video" element={<VideoCall />} />
               <Route path="room/:roomId" element={<UserVideoCall />} />

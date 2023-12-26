@@ -8,9 +8,9 @@ const SelectedUser = ({profile}) => {
   const navigate = useNavigate()
   console.log(profile,"nidhin testing ........")
   
-  function handleSubmit(id){
+  function handleSubmit(id,name){
     // navigate(`/inbox/${id}`)
-    navigate(`/app/inbox1/${id}`)
+    navigate(`/app/inbox1/${id}/${name}`)
   }
   
   
@@ -62,7 +62,7 @@ const SelectedUser = ({profile}) => {
       {isFollowing ? 'Unfollow' : 'Follow'}
     </button> */}
 
-          <button onClick={()=>handleSubmit(profile.user_id)} className="btn btn-wide mt-3 bg-zinc-300 btn-circle ">
+          <button onClick={()=>handleSubmit(profile.user_id,profile.username)} className="btn btn-wide mt-3 bg-zinc-300 btn-circle ">
             Message
           </button>
         </div>

@@ -23,7 +23,7 @@ const UsersInbox = () => {
   const { userInfo } = useSelector((state) => state.user);
   const userId = userInfo?.user_id;
 
-  const { id } = useParams();
+  const { id,name } = useParams();
   const selectedUser = id;
   const [chatter, setChatter] = useState("");
 
@@ -251,7 +251,7 @@ const UsersInbox = () => {
                     
                   </div>
 
-                  <h1 className="px-3 font-semibold capitaliz">{chatter}</h1>
+                  <h1 className="px-3 font-semibold capitaliz">{name}</h1>
                 </div>
 
                 <div>
