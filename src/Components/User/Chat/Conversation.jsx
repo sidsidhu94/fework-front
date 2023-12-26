@@ -33,9 +33,9 @@ const Conversation = ({data}) => {
   const navigate = useNavigate()
 //   console.log(profile,"nidhin testing ........")
   
-  function handleSubmit(id){
+  function handleSubmit(id,name){
     // navigate(`/inbox/${id}`)
-    navigate(`/app/inbox1/${id}`)
+    navigate(`/app/inbox1/${id}/${name}`)
   }
   
 
@@ -45,7 +45,7 @@ const Conversation = ({data}) => {
       {userData.map((user) => (
         
         <div
-        onClick={()=>handleSubmit(user.user_id)}
+        onClick={()=>handleSubmit(user.user_id,user.user_profile.username)}
             
           key={user.user_id}
           className="
@@ -76,8 +76,8 @@ const Conversation = ({data}) => {
                 text-sm
               "
             >
-              {/* <span className="font-semibold capitalize">{user.user_profile.username}</span> */}
-              {/* Include other user data as needed */}
+              <span className="font-semibold capitalize">{user.user_profile.username}</span> 
+              
             </div>
           </div>
         </div>
