@@ -15,6 +15,19 @@ const Premium = () => {
         console.log(Validity,"validity");
     },[Validity])
 
+    useEffect(() => {
+      const fetchPremiumPlans = async () => {
+        try {
+          const response = await axios.get(`${baseURL}account/all-premium/`);
+          console.log(response, "Premium Plans");
+          setPremium(response.data);
+        } catch (error) {
+          console.error("Error fetching premium plans:", error);
+        }
+      };
+      fetchPremiumPlans();
+    }, []);
+
     const handleSubmit = async () => {
         console.log("ohrfieurhfierf")
         
@@ -66,6 +79,7 @@ const Premium = () => {
             <table className="table border-spacing-4 table-fixed   ">
               {/* head */}
               <thead>
+
                 <tr >
                   <th>Sl No</th>
                   {/* <th>ID</th> */}
@@ -76,41 +90,45 @@ const Premium = () => {
                 </tr>
               </thead>
               <tbody>
-                
-                  <tr>
-                    <th></th>
-                    <td>index</td>
-                    <td>
-                      <div className="flex items-center space-x-3">
-                        <div>
-                          <div  className="font-bold">Premium</div>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div className="flex items-center space-x-3">
-                        <div>
-                          <div className="font-bold">Validity</div>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div className="flex items-center space-x-3">
-                        <div>
-                          <div className="font-bold">
-                            <button className='bg-green-300 p-3 rounded-xl'>Edit</button></div>
-                        </div>
-                        <div>
-                        <button className='bg-red-500 p-3 rounded-xl'>Delete</button>
-                        </div>
-                      </div>
-                    </td>
-                    
-                    
-                    
+                {Premium.map((item,index)=>{
 
-                    
-                  </tr>
+<tr>
+<th></th>
+<td>{index}</td>
+<td>
+  <div className="flex items-center space-x-3">
+    <div>
+      <div  className="font-bold">{item.price}</div>
+    </div>
+  </div>
+</td>
+<td>
+  <div className="flex items-center space-x-3">
+    <div>
+      <div className="font-bold">{item.Validity}</div>
+    </div>
+  </div>
+</td>
+<td>
+  <div className="flex items-center space-x-3">
+    <div>
+      <div className="font-bold">
+        <button className='bg-green-300 p-3 rounded-xl'>Edit</button></div>
+    </div>
+    <div>
+    <button className='bg-red-500 p-3 rounded-xl'>Delete</button>
+    </div>
+  </div>
+</td>
+
+
+
+
+
+</tr>
+                })
+              }
+
                 
               </tbody>
               {/* foot */}
