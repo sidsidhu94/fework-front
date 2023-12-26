@@ -7,7 +7,7 @@ const Premium = () => {
 
     const [price, setPrice] = useState()
     const [Validity, setValidity] = useState()
-    const [Premium, setPremium] = useState()
+    const [Premium, setPremium] = useState([])
     console.log(price)
     console.log(Validity)
 
@@ -90,7 +90,7 @@ const Premium = () => {
                 </tr>
               </thead>
               <tbody>
-                {Premium.map((item,index)=>{
+                {Premium?.map((item,index)=>{
 
 <tr>
 <th></th>
@@ -98,19 +98,19 @@ const Premium = () => {
 <td>
   <div className="flex items-center space-x-3">
     <div>
-      <div  className="font-bold">{item.price}</div>
+      <div  className="font-bold">{item?.price}</div>
     </div>
   </div>
 </td>
 <td>
   <div className="flex items-center space-x-3">
     <div>
-      <div className="font-bold">{item.Validity}</div>
+      <div className="font-bold">{item?.Validity}</div>
     </div>
   </div>
 </td>
 <td>
-  <div className="flex items-center space-x-3">
+  {/* <div className="flex items-center space-x-3">
     <div>
       <div className="font-bold">
         <button className='bg-green-300 p-3 rounded-xl'>Edit</button></div>
@@ -118,7 +118,7 @@ const Premium = () => {
     <div>
     <button className='bg-red-500 p-3 rounded-xl'>Delete</button>
     </div>
-  </div>
+  </div> */}
 </td>
 
 
