@@ -76,7 +76,7 @@ const Conversation = ({data}) => {
                 text-sm
               "
             >
-              <span className="font-semibold capitalize">{user.user_profile.username}</span>
+              {/* <span className="font-semibold capitalize">{user.user_profile.username}</span> */}
               {/* Include other user data as needed */}
             </div>
           </div>
