@@ -23,7 +23,8 @@ const UsersInbox = () => {
   const { userInfo } = useSelector((state) => state.user);
   const userId = userInfo?.user_id;
 
-  const { id,name } = useParams();
+  const { id } = useParams();
+  const { name } = useParams();
   const selectedUser = id;
   const [chatter, setChatter] = useState("");
 
