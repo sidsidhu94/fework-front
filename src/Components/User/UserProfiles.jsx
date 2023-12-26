@@ -30,7 +30,7 @@ const UserProfiles = () => {
 
   return (
 
-    <div className='w-full gap-10 flex p-16 h-screen'>
+    <div className='w-full gap-10  p-16 h-screen grid grid-cols-4'>
         {userProfiles.map((e)=>(
             <div className='border flex-wrap   w-72  h-72'>
             <div className=' w-full h-[35%] border-b-2 flex relative justify-center'>
